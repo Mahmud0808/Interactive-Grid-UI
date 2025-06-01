@@ -118,9 +118,6 @@ fun GridScreen(modifier: Modifier = Modifier) {
                                 if (list[fromIndex].isEmpty()) {
                                     return@CustomAccessibilityAction false
                                 }
-                                if (fromIndex >= topItemSize && toIndex == list.lastIndex) {
-                                    return@CustomAccessibilityAction false
-                                }
 
                                 list = list.handleItemReorder(
                                     fromIndex = fromIndex,
@@ -145,9 +142,6 @@ fun GridScreen(modifier: Modifier = Modifier) {
 
                                 // Disallow moving empty items
                                 if (list[fromIndex].isEmpty()) {
-                                    return@CustomAccessibilityAction false
-                                }
-                                if (fromIndex >= topItemSize && toIndex == list.lastIndex) {
                                     return@CustomAccessibilityAction false
                                 }
 
